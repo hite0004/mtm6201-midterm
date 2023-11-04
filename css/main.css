@@ -1,0 +1,318 @@
+ 
+/* setting the padding and margin 0 for no additional space/gaps */
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+img{
+    width: 100%;
+}
+
+/* wrapper set to 1600px so that the content doesn't exceed the max-width size */
+.wrapper{
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+header{
+    /* using background color (which is not in mockup) to divide the content and header,footer more properly */
+    background-color:wheat;
+}
+header .wrapper{
+    /* flex used to make the content get arranged */
+    display: flex;
+    flex-direction: row;
+    /* space-between to make the content set at the start center and end */
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 80px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* default in web size */
+.title h1{
+    font-size: large;
+    color: purple;
+}
+.title p{
+    font-size: small;
+    color: blueviolet;
+}
+
+.orderbtn{
+    /* button customization */
+    display: flex;
+    
+    
+    background-color: limegreen;
+    color: purple;
+    padding: 8px;
+    
+    border-radius: 100px;
+    text-decoration: none;
+    border: 2px solid black;
+    
+}
+
+
+/* main content starts */
+main{
+    padding: 10px;
+}
+section {
+    margin: 10px;
+}
+
+/* targeting the menu section below */
+.menu{
+    /* using flex to arrange the section in one single block and customize the image and button inside it (same for catering and about section) */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: palevioletred;
+    border-radius: 40px;
+
+}
+
+.menu img{
+    width: 250px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 250px;
+}
+
+.menubtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: limegreen;
+    color: purple;
+    padding: 8px;
+    margin-bottom: 9px;
+    border-radius: 100px;
+    font-size: 20px;
+
+    text-decoration: none;
+}
+
+
+/* catering section */
+.catering{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: palevioletred;
+    border-radius: 40px;
+}
+
+.catering img{
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 250px;
+}
+
+.cateringbtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: limegreen;
+    color: purple;
+    padding: 8px;
+    
+    margin-bottom: 9px;
+    border-radius: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    text-decoration: none;
+    
+}
+
+
+/* about section */
+.about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: palevioletred;
+    border-radius: 40px;
+}
+
+.about img{
+    width: 240px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 250px;
+}
+
+.aboutbtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: limegreen;
+    color: purple;
+    padding: 8px;
+    
+    margin-bottom: 9px;
+    border-radius: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    text-decoration: none;
+}
+
+
+/* content section */
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    /* background-color: blanchedalmond; */
+}
+
+.content h2{
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    margin-bottom: 9px;
+    font-size: xx-large;
+    color: purple;
+}
+
+.content p{
+    display: flex;
+    
+    justify-content: center;
+    text-align: center;
+    color: blueviolet;
+    
+}
+
+
+/* footer ul and list items */
+ul{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    list-style-type: none;
+   
+}
+
+footer li{
+    margin-right: 10px;
+    
+}
+
+footer{
+    /* using background color (which is not in mockup) to divide the content and header,footer more properly */
+    background-color: rgb(230, 214, 214);
+    
+}
+
+/* skip links */
+.skip-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .skip-links a{
+    position: absolute;
+    top: -3em;
+    background-color: plum;
+    color:rgb(0, 0, 0);
+    padding: .5em 1em;
+  }
+  .skip-links a:focus{
+    top: 0;
+  }
+
+/* media screen starts 760px */
+@media screen and (min-width: 760px){
+    .title h1{
+        font-size: 50px;
+    }
+    .title p{
+        font-size: 25px;
+    }
+
+    .logo{
+        width: 150px;
+    }
+
+    .orderbtn{
+        font-size: 26px;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+        
+        
+    }
+} 
+
+
+
+/* media screen for 900px and above */
+@media screen and (min-width: 900px){
+    /* using grid to arrange the sections in columns */
+    main{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        padding-top: 60px;
+    }
+
+    .content{
+        text-align: center;
+        grid-column: 1/5;
+        background-color: white;
+    }
+    
+    .content p{
+        font-size: 20px;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        padding: 40px;
+        
+        
+    }
+
+    footer ul {
+        font-size: 20px;
+       
+    }
+
+
+    
+}
+    

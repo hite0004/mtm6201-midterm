@@ -1,0 +1,295 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+    
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+/* skip links */
+.skip-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .skip-links a{
+    position: absolute;
+    top: -3em;
+    background-color: plum;
+    color:rgb(0, 0, 0);
+    padding: .5em 1em;
+  }
+  .skip-links a:focus{
+    top: 0;
+  }
+
+/* header starts */
+header{
+    background-color:wheat;
+}
+header .wrapper{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 80px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* default in web size */
+.title h1{
+    font-size: large;
+    color: purple;
+}
+.title p{
+    font-size: small;
+    color: blueviolet;
+}
+
+.orderbtn{
+    display: flex;
+    
+    
+    background-color: limegreen;
+    color: purple;
+    padding: 8px;
+    
+    border-radius: 100px;
+    text-decoration: none;
+    border: 2px solid black;
+    
+}
+
+/* main content starts */
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2{
+    padding: 20px;
+}
+
+.story{
+    background-color: lightpink;
+    
+    margin: 10px;
+}
+
+.team{
+    background-color: palevioletred;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+    
+}
+
+.team img{
+    /* adding border-radius to make the image rounded from corners */
+    border-radius: 10px;
+    width: 360px;
+    margin-top: 8px;
+}
+
+.team a{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+    
+    background-color: limegreen;
+    color: purple;
+    padding: 20px;
+    margin-bottom: 9px;
+    width: 200px;
+    /* border-radius: 100px; */
+    margin-top: 10px;
+    text-decoration: none;
+    /* font-size: 20px; */
+}
+
+h3{
+    padding-bottom: 10px;
+
+}
+
+.joinus{
+    background-color: palevioletred;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px;
+    
+}
+
+.joinus img{
+    border-radius: 10px;
+    width: 360px;
+    margin-top: 8px;
+}
+
+.joinus a{
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+    
+    
+    background-color: limegreen;
+    color: purple;
+    padding: 20px;
+    margin-bottom: 9px;
+    width: 200px;
+    /* border-radius: 100px; */
+    margin-top: 10px;
+    text-decoration: none;
+    /* font-size: 20px; */
+}
+
+.content-about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    /* background-color: blanchedalmond; */
+}
+
+.content-about h2{
+    display: flex;
+    justify-content: center;
+    line-height: 1.5;
+    margin-bottom: 9px;
+    font-size: xx-large;
+}
+
+.content-about p{
+    display: flex;
+    
+    justify-content: center;
+    text-align: center;
+    
+}
+
+/* footer starts */
+ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    padding: 10px;
+    list-style-type: none;
+   
+}
+
+footer li{
+    margin-left: 10px;
+    
+}
+
+footer{
+    background-color: rgb(230, 214, 214);
+    
+}
+
+
+/* media query starts for 760px and above size */
+@media screen and (min-width: 760px){
+    .title h1{
+        font-size: 50px;
+    }
+    .title p{
+        font-size: 25px;
+    }
+
+    .logo{
+        width: 150px;
+    }
+
+    .orderbtn{
+        font-size: 26px;
+    }
+    footer{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .team img, .joinus img{
+        width: 500px;
+    }
+
+   
+} 
+
+/* media query starts for 1200px and above (web)*/
+@media screen and (min-width: 1200px){
+    .story{
+        /* using grid to arrange the items for web view */
+        display: grid;
+        /* using grid column 1/2 so that the paragraph and title stays on the left side  */
+        grid-column: 1/2;
+        padding: 0;
+        background-color: white;
+        position: relative;
+    }
+
+    .story p{
+        position: absolute;
+        margin-top: 60px;
+        font-size: 20px
+    }
+
+    .story h3{
+        font-size: 30px;
+    }
+
+    .bakeryimg{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        /* using grid column 2/4 so that the image stays on the right of the grid */
+        grid-column: 2/4;
+        
+    }
+    
+
+    .aboutcontent{
+        display: grid;
+        
+        
+    }
+    .team{
+        display: grid;
+        grid-column: 1/2;
+        justify-content: center;
+    }
+    /* .team a{
+        justify-content: center;
+    } */
+    .joinus{
+        display: grid;
+        grid-column: 2/3;
+        justify-content: center;
+    }
+}
+
+

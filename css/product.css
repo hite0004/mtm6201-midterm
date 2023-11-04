@@ -1,0 +1,219 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+img{
+    width: 100%;
+}
+
+.wrapper{
+    margin: 0 auto;
+    max-width: 1600px;
+}
+
+
+/* skip links */
+.skip-links{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .skip-links a{
+    position: absolute;
+    top: -3em;
+    background-color: plum;
+    color:rgb(0, 0, 0);
+    padding: .5em 1em;
+  }
+  .skip-links a:focus{
+    top: 0;
+  }
+
+/* header starts */
+header{
+    background-color:wheat;
+}
+header .wrapper{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 80px;
+}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* default in web size */
+.title h1{
+    font-size: large;
+    color: purple;
+}
+.title p{
+    font-size: small;
+    color: blueviolet;
+}
+
+.orderbtn{
+    display: flex;
+    
+    
+    background-color: limegreen;
+    color: purple;
+    padding: 8px;
+    
+    border-radius: 100px;
+    text-decoration: none;
+    border: 2px solid black;
+    
+}
+
+
+/* main content starts */
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2{
+    padding: 20px;
+}
+
+/* targeting all the product classes for easy designing */
+.bagel, .cake, .cheesecake, .apple-pie, .cheeseburger, .muffin, .cookie, .cupcake, .donut, .waffles{
+    /* using flex with direction-row for mobile style */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: palevioletred;
+    border-radius: 50px;
+    margin: 4px;
+}
+/* targeting all the product images at once */
+.bagel, .cake, .cheesecake, .apple-pie, .cheeseburger, .muffin, .cookie, .cupcake, .donut, .waffles img{
+    width: 350px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    /* padding: 8px; */
+    /* border: 2px solid rgb(255, 255, 255); */
+    /* border-radius: 250px; */
+    
+}
+
+.bagel, .cake, .cheesecake, .apple-pie, .cheeseburger, .muffin, .cookie, .cupcake, .donut,  h3{
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+.bagel, .cake, .cheesecake, .apple-pie, .cheeseburger, .muffin, .cookie, .cupcake, .donut, .waffles p{
+    font-size: large;
+    margin-top: 13px;
+}
+
+/* buttons */
+.btn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: limegreen;
+    color: purple;
+    padding: 30px;
+    margin-bottom: 9px;
+    border-radius: 100px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* both cheesecake and apple pie buttons were not arranged properly before that is why changing the margin top for both of these seperately */
+.cheesecake .btn{
+    margin-top: 29px;
+}
+.apple-pie .btn{
+    margin-top: 35px;
+}
+
+/* footer ul and list items */
+ul{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    list-style-type: none;
+   
+}
+
+footer li{
+    margin-right: 10px;
+    
+}
+
+footer{
+    background-color: rgb(230, 214, 214);
+    
+}
+
+/* media query starts for 760px and above */
+@media screen and (min-width: 760px) {
+    .products{
+        /* using grid to arrange the products in 5 rows and 2 columns format */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(5,1fr);
+    }
+
+    .title h1{
+        font-size: xx-large;
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        
+        
+    }
+}
+
+/* media query starts for 1200px and above  */
+@media screen and (min-width: 1200px) {
+    .products{
+        /* arranging the products in 4 rows and 5 columns design for wider view in web size */
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4,1fr);
+    }
+
+    footer{
+        display: flex;
+        flex-direction: row;
+        padding: 40px;
+        
+        
+    }
+
+    footer ul {
+        font-size: 20px;
+       
+    }
+}
+
+/* media query for width 1600px and above (for web/laptops)  */
+@media screen and (min-width: 1600px){
+    .products{
+        /* grid set to 3 rows and 4 columns */
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(3,1fr);
+    }
+}
