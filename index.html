@@ -21,7 +21,7 @@
 
 
     <!-- header starts -->
-    <header id="top">
+    <header role="banner" id="top">
         <div class="wrapper">
             <div itemscope itemtype="https://schema.org/Thing">
                 
@@ -31,7 +31,7 @@
                 <h1>Greyjoy Bakery</h1>
                 <p><em>A flavor for every mood</em></p>
             </div>
-            <nav>
+            <nav role="navigation">
                 <a class="orderbtn" aria-label="order products now" href="pages/product.html">Order now</a>
             </nav>
         </div>
@@ -39,20 +39,38 @@
     </header>
 
     <!-- main content starts -->
-    <main>
+    <main role="main">
         <section id="menu" class="menu">
             <!-- class-wrapper to make the site more responsive -->
             <div class="wrapper">
                 <div>
-                    <img src="images/menu-image.png" alt="image of bakery food items in a plate">
-                </div>
+                    <picture> 
+                        <!-- using picture tag for responsive images -->
+                        <source srcset="images/menu-image-480_x_480.png 1x,
+                        images/menu-image-760_x_760.png 2x,
+                        images/menu-image-900_x_900 3x" media="(max-width:480px)"/>
+                        <source srcset="images/menu-image-760_x_760.png 1x,
+                        images/menu-image-900_x_900.png 2x,
+                        images/menu-image-2000_x_2000.png" media="(max-width:900px)"/>
+                    
+                        <img src="images/menu-image.png" alt="image of bakery food items in a plate">
+                    </picture>
+            </div>
                 <div>
                     <a class="menubtn" aria-label="go to menu page" href="pages/product.html">Menu</a>
                 </div>
         </section>
             <section id="catering" class="catering">
                 <div>
-                    <img src="images/catering-image.png" alt="bakery food items such as bread">
+                    <picture> 
+                        <source srcset="images/catering-image-480_x_480.png 1x,
+                        images/catering-image-760_x_760.png 2x,
+                        images/catering-image-900_x_900 3x" media="(max-width:480px)"/>
+                        <source srcset="images/catering-image-760_x_760.png 1x,
+                        images/catering-image-900_x_900.png 2x,
+                        images/catering-image-1200_x_1200.png" media="(max-width:900px)"/>
+                        <img src="images/catering-image.png" alt="bakery food items such as bread">
+                    </picture>
                 </div>
                 <div>
                     <a class="cateringbtn" aria-label="go to catering page" href="pages/product.html">Catering</a>
@@ -60,7 +78,16 @@
             </section>
             <section id="about" class="about">
                 <div>
-                    <img src="images/shop-about.png" alt="an image of a female baker">
+                    <picture> 
+                        <!-- using picture tag for responsive images -->
+                        <source srcset="images/shop-about-480_x_480.png 1x,
+                        images/shop-about-760_x_760.png 2x,
+                        images/shop-about-900_x_900 3x" media="(max-width:480px)"/>
+                        <source srcset="images/shop-about-760_x_760.png 1x,
+                        images/shop-about-900_x_900.png 2x,
+                        images/shop-about-1200_x_1200.png" media="(max-width:900px)"/>
+                        <img src="images/shop-about.png" alt="an image of a female baker">
+                    </picture>
                 </div>
                 <div>
                     <a class="aboutbtn" aria-label="go to about us page" href="pages/about.html">About Us</a>
@@ -77,7 +104,7 @@
     </main>
 
     <!-- footer starts -->
-    <footer>
+    <footer role="contentinfo">
         <div class="wrapper">
             <ul class="links">
                 <li><a href="#">Privacy Policy</a></li>
