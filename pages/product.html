@@ -19,7 +19,7 @@
       </nav>
       
     <!-- start of header (header is mostly same for all the pages) -->
-    <header>
+    <header role="banner">
         <div class="wrapper">
             <div>
                 <img class="logo" src="../images/logo.png" alt="greyjoy bakery logo">
@@ -28,31 +28,31 @@
                 <h1>Greyjoy Bakery</h1>
                 <p><em>A flavor for every mood</em></p>
             </div>
-            <nav>
+            <nav role="navigation">
                 <a class="orderbtn" href="#">Order now</a>
             </nav>
         </div>
     </header>
 
     <!-- start of main content -->
-    <main>
+    <main role="main">
         <h2>Menu</h2>
         <!-- a main div with class- products to use grid in css easily -->
         <div id="products" class="products">
             <!-- products are divided into different sections to not complicate the code -->
-         <section class="bagel">
-            <div class="wrapper">
-                <div>
-                    <img src="../images/bagel.png" alt="image of a bagel">
-                </div>
-                <div>
-                    <h3>Bagel</h3>
-                    <p>$2.50</p>
-                </div>
-                <div>
-                    <!-- all the buttons are given the same class to make it easy to design in css -->
-                    <a class="btn" href="">Add to cart</a>
-                </div>
+            <section class="bagel">
+                <div class="wrapper">
+                    <div>
+                        <img src="../images/bagel.png" alt="image of a bagel">
+                    </div>
+                    <div>
+                        <h3>Bagel</h3>
+                        <p>$2.50</p>
+                    </div>
+                    <div>
+                        <!-- all the buttons are given the same class to make it easy to design in css -->
+                        <a class="btn" aria-label="add bagel to cart" href="#">Add to cart</a>
+                    </div>
             </section>
             <section class="cake">
                 <div class="wrapper">
@@ -64,118 +64,118 @@
                         <p>$3.50</p>
                     </div>
                     <div>
-                        <a class="btn" href="">Add to cart</a>
+                        <a class="btn" aria-label="add cake slice to cart" href="#">Add to cart</a>
                     </div>
-                </section>
+            </section>
                 <section class="cheesecake">
                     <div class="wrapper">
-                        <div>
-                            <img src="../images/cheesecake.png" alt="image of cheeesecake">
+                        <div itemscope itemtype="https://schema.org/Product">
+                            <img itemprop="image" src="../images/cheesecake.png" alt="image of cheeesecake">
                         </div>
                         <div>
                             <h3>Cheesecake</h3>
                             <p>$5.00</p>
                         </div>
                         <div>
-                            <a class="btn" href="">Add to cart</a>
+                            <a class="btn" aria-label="add cheesecake to cart" href="#">Add to cart</a>
                         </div>
                     </section>
                     <section class="apple-pie">
                         <div class="wrapper">
-                            <div>
-                                <img src="../images/apple-pie.png" alt="image of an apple pie">
+                            <div itemscope itemtype="https://schema.org/Product">
+                                <img itemprop="image" src="../images/apple-pie.png" alt="image of an apple pie">
                             </div>
                             <div>
                                 <h3>Apple pie</h3>
                                 <p>$3.50</p>
                             </div>
                             <div>
-                                <a class="btn" href="">Add to cart</a>
+                                <a class="btn" aria-label="add apple pie to cart" href="#">Add to cart</a>
                             </div>
                         </section>
                         <section class="cheeseburger">
                             <div class="wrapper">
-                                <div>
-                                    <img src="../images/cheeseburger.png" alt="image of cheeseburger">
+                                <div itemscope itemtype="https://schema.org/Product">
+                                    <img itemprop="image" src="../images/cheeseburger.png" alt="image of cheeseburger">
                                 </div>
                                 <div>
                                     <h3>Cheeseburger</h3>
                                     <p>$6.50</p>
                                 </div>
                                 <div>
-                                    <a class="btn" href="">Add to cart</a>
+                                    <a class="btn" aria-label="add cheeseburger to cart" href="#">Add to cart</a>
                                 </div>
                             </section>
                             <section class="waffles">
                                 <div class="wrapper">
-                                    <div>
-                                        <img src="../images/waffle.png" alt="image of waffle">
+                                    <div itemscope itemtype="https://schema.org/Product">
+                                        <img itemprop="image" src="../images/waffle.png" alt="image of waffle">
                                     </div>
                                     <div>
                                         <h3>Waffle</h3>
                                         <p>$2.50</p>
                                     </div>
                                     <div>
-                                        <a class="btn" href="">Add to cart</a>
+                                        <a class="btn" aria-label="add waffle to cart" href="#">Add to cart</a>
                                     </div>
                                 </section>
                                 <section class="muffin">
                                     <div class="wrapper">
-                                        <div>
-                                            <img src="../images/muffin.png" alt="image of muffin">
+                                        <div itemscope itemtype="https://schema.org/Product">
+                                            <img itemprop="image" src="../images/muffin.png" alt="image of muffin">
                                         </div>
                                         <div>
                                             <h3>Muffin</h3>
                                             <p>$2.50</p>
                                         </div>
                                         <div>
-                                            <a class="btn" href="">Add to cart</a>
+                                            <a class="btn" aria-label="add muffin to cart" href="#">Add to cart</a>
                                         </div>
                                     </section>
                                     <section class="cookie">
                                         <div class="wrapper">
-                                            <div>
-                                                <img src="../images/cookie.png" alt="image of cookie">
+                                            <div itemscope itemtype="https://schema.org/Product">
+                                                <img itemprop="image" src="../images/cookie.png" alt="image of cookie">
                                             </div>
                                             <div>
                                                 <h3>Cookie</h3>
                                                 <p>$2.50</p>
                                             </div>
                                             <div>
-                                                <a class="btn" href="">Add to cart</a>
+                                                <a class="btn" aria-label="add cookie to cart" href="#">Add to cart</a>
                                             </div>
                                         </section>
                                         <section class="cupcake">
                                             <div class="wrapper">
-                                                <div>
-                                                    <img src="../images/cupcake.png" alt="image of cupcake">
+                                                <div itemscope itemtype="https://schema.org/Product">
+                                                    <img itemprop="image" src="../images/cupcake.png" alt="image of cupcake">
                                                 </div>
                                                 <div>
                                                     <h3>CupCake</h3>
                                                     <p>$3.50</p>
                                                 </div>
                                                 <div>
-                                                    <a class="btn" href="">Add to cart</a>
+                                                    <a class="btn" aria-label="add cupcake to cart" href="#">Add to cart</a>
                                                 </div>
                                             </section>
                                             <section class="donut">
                                                 <div class="wrapper">
-                                                    <div>
-                                                        <img src="../images/donut.png" alt="image of donut">
+                                                    <div itemscope itemtype="https://schema.org/Product">
+                                                        <img itemprop="image" src="../images/donut.png" alt="image of donut">
                                                     </div>
                                                     <div>
                                                         <h3>Donut</h3>
                                                         <p>$4.50</p>
                                                     </div>
                                                     <div>
-                                                        <a class="btn" href="">Add to cart</a>
+                                                        <a class="btn" aria-label="add donut to cart" href="#">Add to cart</a>
                                                     </div>
                                                 </section>
             </div>
     </main>
 
     <!-- footer starts (same as homepage footer) -->
-    <footer>
+    <footer role="contentinfo">
         <div class="wrapper">
             <ul class="links">
                 <li><a href="#">Privacy Policy</a></li>
